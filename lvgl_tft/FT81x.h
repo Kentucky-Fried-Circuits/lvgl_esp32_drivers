@@ -14,4 +14,6 @@ void FT81x_init(void);
 
 void FT81x_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color_map);
 
+void screenOnOff();
+
 #endif /* FT81X_H_ */

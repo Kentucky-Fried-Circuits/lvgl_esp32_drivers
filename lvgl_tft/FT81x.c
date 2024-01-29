@@ -327,3 +327,10 @@ void FT81x_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color
 {
 	TFT_WriteBitmap((uint8_t*)color_map, area->x1, area->y1, lv_area_get_width(area), lv_area_get_height(area));
 }
+
+void screenOnOff(){
+	if(EVE_memRead16(REG_PWM_DUTY) != 0)
+		EVE_memWrite16(REG_PWM_HZ,0x50);
+	else 
+		EVE_memWrite16(REG_PWM_HZ,0);
+}
