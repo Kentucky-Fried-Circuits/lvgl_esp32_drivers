@@ -327,7 +327,6 @@ void FT81x_flush(lv_disp_drv_t *drv, const lv_area_t *area, lv_color_t *color_ma
 
 void screenOnOff()
 {
-	ESP_LOGI("raydebug", "current value %u", EVE_memRead16(REG_PWM_DUTY));
 	if (EVE_memRead16(REG_PWM_DUTY) != 0)
 
 		EVE_memWrite16(REG_PWM_DUTY, 0);
