@@ -277,7 +277,7 @@ void FT81x_init(void)
 	{
 		tft_active = 1;
 
-		EVE_memWrite8(REG_PWM_DUTY, 0x30); /* setup backlight, range is from 0 = off to 0x80 = max */
+		EVE_memWrite8(REG_PWM_DUTY, 0x40); /* setup backlight, range is from 0 = off to 0x80 = max */
 
 		touch_calibrate();
 
